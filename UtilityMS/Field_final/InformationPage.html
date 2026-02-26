@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Utility Forms</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+
+        }
+
+        h2{
+        padding: 35px 20px;
+        text-align: center;
+        background: linear-gradient(to right, #0077c2, #00b4d8);
+        color: white;
+        border-radius: 18px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        margin-bottom:50px ;
+        }
+
+
+        .form{
+            margin-left: 250px;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: row;
+            gap: 10rem;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            width: 400px;
+            min-height: 500px;
+        }
+
+
+        .input-form{
+        margin-bottom: 18px;
+        }
+
+        .input-form { margin-bottom: 20px; }
+        .input-form label { font-weight: 600; margin-bottom: 6px; display: block; font-size: 16px; }
+        .input-form input {
+        
+        width: 93%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 2px solid #c5cae9;
+        font-size: 15px;
+        outline: none;
+        transition: 0.3s;
+        }
+        
+        .input-form select{
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid #c5cae9;
+            font-size: 15px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .input-form input:focus,
+        .input-form select:focus {
+
+        background: #fff;
+        outline: none;
+        border-color: #3f51b5;
+        box-shadow: 0 0 8px rgba(63, 81, 181, 0.2);
+        }
+        .button-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 20px;
+        }
+
+        .btn {
+        font-family: 'Times New Roman', Times, serif;
+        flex: 1;
+        padding: 11px;
+        border-radius: 10px;
+        border: none;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: 0.3s;
+        color: white;
+        }
+
+        .btn-submit { background: #1a237e; }
+        .btn-submit:hover { background: #0f1652; }
+
+        .btn-clear { background: #ffa000; }
+        .btn-clear:hover { background: #d68600; }
+
+        .btn-back {
+        width: 80%;
+        display: block;
+        padding: 12px;
+        margin-top: 20px;
+        text-align: center;
+        border-radius: 10px;
+        background: #e0e0e0;
+        color: #1a237e;
+        font-weight: 600;
+        text-decoration: none;
+        border: 2px solid #1a237e;
+        }
+
+        .btn-back:hover {
+        background: #1a237e;
+        color: white;
+        }
+    </style>
+</head>
+<body>
+
+     <div class="form">
+
+    <div class="form-container">
+        <h2>Electricity Connection</h2>
+        <form action="addElectricity.php" method="POST">
+            <div class="input-form">
+            <label>Connection:</label>
+            <select name="connection_id" required>
+                <option value="">Select Connection</option>
+            </select>
+            </div>
+
+            <div class="input-form">
+            <label>Meter Type:</label>
+            <input type="text" name="meter_type" placeholder="e.g., Digital, Analog" required>
+            </div>
+
+            <div class="input-form">
+            <label>Voltage:</label>
+            <input type="text" name="voltage" placeholder="e.g., 220V" required>
+            </div>
+            <div class="button-row">
+            <button type="submit" class="btn btn-submit">Add Electricity Information</button>
+            <button type="reset" class="btn btn-clear">Clear</button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="form-container">
+        <h2>Water Connection</h2>
+        <form action="addWater.php" method="POST">
+            <div class="input-form">
+            <label>Connection:</label>
+            <select name="connection_id" required>
+                <option value="">Select Connection</option>
+            </select>
+            </div>
+
+            <div class="input-form">
+            <label>Pipe Size:</label>
+            <input type="text" name="pipe_size" placeholder="e.g., 1 inch" required>
+            </div>
+
+            <div class="input-form">
+            <label>Pressure:</label>
+            <input type="text" name="pressure" placeholder="e.g., 2 bar" required>
+            </div>
+
+            <div class="button-row">
+            <button type="submit" class="btn btn-submit">Add Water Informationno</button>
+            <button type="reset" class="btn btn-clear">Clear</button>
+            </div>
+
+      <a href="../Field_final/dashboard.html"  class="btn-back">← Go Back to Dashboard</a>
+        </form>
+    </div>
+    </div>
+
+</body>
+</html>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const electricityForm = document.querySelector('form[action="addElectricity.php"]');
+    electricityForm.addEventListener('submit', (e) => {
+        const connection = electricityForm.connection_id.value;
+        const meterType = electricityForm.meter_type.value.trim();
+        const voltage = electricityForm.voltage.value.trim();
+
+        if (!connection || !meterType || !voltage) {
+            alert('Please fill in all Electricity fields.');
+            e.preventDefault();
+            return;
+        }
+
+        if (isNaN(voltage)) {
+            alert('Voltage must be a number.');
+            e.preventDefault();
+            return;
+        }
+    });
+
+    const waterForm = document.querySelector('form[action="addWater.php"]');
+    waterForm.addEventListener('submit', (e) => {
+        const connection = waterForm.connection_id.value;
+        const pipeSize = waterForm.pipe_size.value.trim();
+        const pressure = waterForm.pressure.value.trim();
+
+        if (!connection || !pipeSize || !pressure) {
+            alert('Please fill in all Water fields.');
+            e.preventDefault();
+            return;
+        }
+
+        if (isNaN(pressure)) {
+            alert('Pressure must be a number.');
+            e.preventDefault();
+            return;
+        }
+
+ 
+    });
+});
+</script>

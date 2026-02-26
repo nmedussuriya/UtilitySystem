@@ -1,0 +1,131 @@
+body{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h2 {
+  font-size: 30px;
+  color: #1e88e5;
+  margin-bottom: 6px;
+}
+
+header p {
+  color: #555;
+  font-size: 14px;
+}
+
+.divider {
+    margin: 30px 0;
+    border: none;
+    border-top: 2px solid #ccc;
+}
+
+.view-section {
+    background-color: #f9f9f9;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.view-section h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.view-section table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+.view-section th, .view-section td {
+  font-family: 'Times New Roman', Times, serif;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.view-section th {
+    background-color: #1e88e5;
+    color: white;
+    font-weight: 600;
+}
+
+.view-section tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.view-section tbody tr:hover {
+    background-color: #d1e7dd;
+    transition: background-color 0.3s ease;
+}
+
+.view-section td {
+    color: #555;
+}
+
+@media screen and (max-width: 768px) {
+    .view-section table, 
+    .view-section thead, 
+    .view-section tbody, 
+    .view-section th, 
+    .view-section td, 
+    .view-section tr { 
+        display: block; 
+    }
+
+    .view-section thead tr {
+        display: none;
+    }
+
+    .view-section tbody tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #fff;
+    }
+
+    .view-section td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .view-section td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        padding-left: 15px;
+        font-weight: 600;
+        text-align: left;
+        color: #333;
+    }
+}
+
+.btn-back {
+  width: 30%;
+  display: block;
+  padding: 12px;
+  margin-top: 20px;
+  margin-left: 500px;
+  text-align: center;
+  border-radius: 10px;
+  background: #e0e0e0;
+  color: #1a237e;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #1a237e;
+}
+
+.btn-back:hover {
+  background: #1a237e;
+  color: white;
+}

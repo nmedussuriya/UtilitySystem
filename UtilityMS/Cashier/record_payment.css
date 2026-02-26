@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 0;
+}
+
+.page-container {
+  width: 90%;
+  max-width: 1100px;
+  background: white;
+  padding: 40px 50px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h2 {
+  color: #1e88e5;
+  margin-bottom: 6px;
+}
+
+header p {
+  color: #555;
+  font-size: 14px;
+}
+
+section h3 {
+  color: #1565c0;
+  margin-bottom: 15px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+input, select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #cfd8dc;
+  font-size: 14px;
+  background-color: #f9fbff;
+}
+
+input:focus, select:focus {
+  border-color: #42a5f5;
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: 0 0 4px rgba(66, 165, 245, 0.4);
+}
+
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  transition: background 0.2s ease;
+}
+
+.submit-btn {
+  background-color: #1e88e5;
+  color: white;
+  margin-top: 20px;
+}
+.submit-btn:hover {
+  background-color: #1565c0;
+}
+
+.clear-btn {
+  background-color: #ffb300;
+  color: white;
+  margin-top: 20px;
+}
+.clear-btn:hover {
+  background-color: #f57c00;
+}
+.btn-back {
+  width: 30%;
+  display: block;
+  padding: 12px;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background: #e0e0e0;
+  color: #1a237e;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #1a237e;
+}
+
+.btn-back:hover {
+  background: #1a237e;
+  color: white;
+}
+
+.divider {
+  margin: 40px 0;
+  border: none;
+  height: 1px;
+  background-color: #e3f2fd;
+}
+
+.filter-bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.filter-bar select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.filter-btn {
+  background-color: #42a5f5;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.filter-btn:hover {
+  background-color: #1e88e5;
+}
+
+
+.divider {
+    margin: 30px 0;
+    border: none;
+    border-top: 2px solid #ccc;
+}
+
+.view-section {
+    background-color: #f9f9f9;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.view-section h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.view-section table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+.view-section th, .view-section td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.view-section th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: 600;
+}
+
+.view-section tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.view-section tbody tr:hover {
+    background-color: #d1e7dd;
+    transition: background-color 0.3s ease;
+}
+
+.view-section td {
+    color: #555;
+}
+
+@media screen and (max-width: 768px) {
+    .view-section table, 
+    .view-section thead, 
+    .view-section tbody, 
+    .view-section th, 
+    .view-section td, 
+    .view-section tr { 
+        display: block; 
+    }
+
+    .view-section thead tr {
+        display: none;
+    }
+
+    .view-section tbody tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #fff;
+    }
+
+    .view-section td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .view-section td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        padding-left: 15px;
+        font-weight: 600;
+        text-align: left;
+        color: #333;
+    }
+}

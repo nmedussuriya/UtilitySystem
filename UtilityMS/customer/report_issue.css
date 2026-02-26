@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: #f5f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.issue-container {
+  background: #fff;
+  width: 550px;
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h2 {
+  color: #2f67e8;
+  margin-bottom: 6px;
+}
+
+header p {
+  font-size: 14px;
+  color: #555;
+}
+
+.issue-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #2f67e8;
+  outline: none;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  
+}
+
+.submit-btn {
+  background-color: #2f67e8;
+  color: white;
+  text-decoration: none;
+}
+.submit-btn:hover {
+  background-color: #1f4db5;
+}
+
+.clear-btn {
+  background-color: #ff9800;
+  color: white;
+}
+.clear-btn:hover {
+  background-color: #e68900;
+}
+
+.btn-back {
+  width: 100%;
+  display: block;
+  padding: 12px;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background: #e0e0e0;
+  color: #1a237e;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #1a237e;
+}
+
+.btn-back:hover {
+  background: #1a237e;
+  color: white;
+}

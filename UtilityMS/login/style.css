@@ -1,0 +1,141 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height:50vh;
+	background: url("images.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+}
+
+
+.wrapper{
+	width: 420px;
+	min-height: 450px;
+	background: transparent;
+	border: 2px solid rgba(255,255,255,.2);
+	backdrop-filter: blur(20px);
+	box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+	color: #fff;
+	border-radius: 15px;
+	padding: 30px 40px;
+	transition: all 0.3s ease; 
+}
+
+.wrapper h1{
+	font-size:36px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.wrapper .input-box{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	margin: 30px 0;
+}
+
+
+
+.types select{
+	width: 350px;
+	height: 50px;
+	background: transparent;
+	border: none;
+	outline: none;
+	border: 2px solid rgba( 255, 255, 255, .2);
+	border-radius: 40px;
+	font-size: 16px;
+	color: #fff;
+	padding: 0px 20px ;
+	margin-bottom: px;
+}
+.types option{
+	color: #000000;
+}
+
+
+.input-box input{
+	width: 350px;
+	height: 50px;
+	background: transparent;
+	border: none;
+	outline: none;
+	border: 2px solid rgba( 255, 255, 255, .2);
+	border-radius: 40px;
+	font-size: 16px;
+	color: #fff;
+	padding: 0px 20px ;
+}
+ 
+.input-box input::placeholder{
+	color: #fff;
+}
+
+.input-box i{
+	position: absolute;
+	right: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 20px;
+}
+
+.wrapper .btn {
+	width: 102%;
+	height: 45px;
+	background: #fff;
+	border: none;
+	outline: none;
+	border-radius: 40px;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+	cursor: pointer;
+	font-size: 16px;
+	color: #333;
+	font-weight: 600;
+	margin-top: 25px;
+}
+
+
+
+.alert {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.alert.red {
+    background-color: #fdecea;
+    color: #b71c1c;
+    border: 1px solid #f5c2c7;
+}
+
+.alert.green {
+    background-color: #e6f4ea;
+    color: #1b5e20;
+    border: 1px solid #b7dfc2;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
