@@ -1,12 +1,6 @@
 <?php
 
 include('../backend/db_connection.php');
-try {
-    $conn = new PDO("sqlsrv:Server=$serverName;Database=$dbName");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Database connection failed");
-}
 
 
 $service = $_GET['service'] ?? '';
