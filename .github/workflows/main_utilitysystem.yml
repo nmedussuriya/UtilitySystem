@@ -64,8 +64,9 @@ jobs:
         with:
           app-name: 'UtilitySystem'
           slot-name: 'Production'
-          package: .
+          package: ./login
 
           
+
 
 
