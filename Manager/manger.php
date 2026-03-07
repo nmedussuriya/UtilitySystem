@@ -83,6 +83,60 @@ if ($role !== 'Manager' && $role !== 'Admin') {
             text-decoration: none;
             border: 2px solid #1a237e;
         }
+
+        @media (max-width:768px){
+    
+        header h1{
+            font-size:24px;
+        }
+    
+        header p{
+            font-size:14px;
+        }
+    
+        .dashboard-container{
+            padding:25px;
+        }
+    
+        th, td{
+            padding:12px;
+            font-size:14px;
+        }
+    
+        .btn-generate{
+            padding:8px 14px;
+            font-size:13px;
+        }
+    
+        .btn-back{
+            width:100%;
+        }
+    
+    }
+    
+    /* SMALL PHONES */
+    
+    @media (max-width:480px){
+    
+        body{
+            padding:10px;
+        }
+    
+        header{
+            padding:20px 10px;
+        }
+    
+        header h1{
+            font-size:20px;
+        }
+    
+        .dashboard-container{
+            padding:20px;
+        }
+    
+    }
+
+</style>
     </style>
 </head>
 <body>
