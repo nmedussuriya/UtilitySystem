@@ -161,19 +161,18 @@ header p {
   }
 
   .stat-card {
-    margin: 20px;
+    margin: 20px auto;
   }
 
   .box {
     margin: 0 auto;
-    width: 100%;
+    width: 70%;
   }
 
   .box .btn {
     padding: 10px 20px;
     font-size: 16px;
   }
-}
 
 
 </style>
