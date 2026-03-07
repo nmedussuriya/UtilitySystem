@@ -42,8 +42,10 @@ Platform: Cloud-hosted production environment
 
 Frontend: HTML, CSS
 
-Backend: PHP
+Backend: PHP 
 
 Database: Microsoft SQL Server (Azure SQL)
 
 Cloud Provider: Microsoft Azure
+
+DEPLOYED LINK - [utilitysystem-fwh4h2f2ahencucf.centralindia-01.azurewebsites.net](https://utilitysystem-fwh4h2f2ahencucf.centralindia-01.azurewebsites.net/)
