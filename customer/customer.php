@@ -143,7 +143,7 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'Customer') {
    <div class="card">
     <h2>⚠️ Report Issue</h2>
     <p>View and download your previous bills.</p>
-    <a href="Report_issefll.php">Go to History</a>
+    <a href="Report_issefll.php">Report Issues</a>
 
 
 
