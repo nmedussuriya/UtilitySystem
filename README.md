@@ -48,4 +48,18 @@ Database: Microsoft SQL Server (Azure SQL)
 
 Cloud Provider: Microsoft Azure
 
+Demo Login Credentials
+
+Admin
+Username: charliew
+Password: DF2243E9C3#
+
+Customer
+Username: aliceb 
+Password: BE3F1F97A1!
+
+Manager
+Username: ians
+Password: 8369C67EI9@
+
 DEPLOYED LINK - [utilitysystem-fwh4h2f2ahencucf.centralindia-01.azurewebsites.net](https://utilitysystem-fwh4h2f2ahencucf.centralindia-01.azurewebsites.net/)
